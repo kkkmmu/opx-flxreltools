@@ -1,0 +1,99 @@
+{
+    "Externals" : {
+        "ThriftDeps" : [ "libboost-dev", 
+                         "libboost-test-dev", 
+                         "libboost-program-options-dev",
+                         "libboost-system-dev",
+                         "libboost-filesystem-dev",
+                         "libevent-dev automake",
+                         "libtool flex bison",
+                         "pkg-config",
+                         "g++",
+                         "libssl-dev",
+                         "ant"
+        ],
+        "PythonDeps" : [ "python-dev",
+                         "python-bitarray",
+                         "python-paramiko",
+                         "python-netaddr"
+        ],
+        "PackageDeps" : ["fakeroot", 
+                         "dh-make"
+        ],
+        "MiscDeps" : [ "libpcap-dev",
+		      "gccgo-4.8"
+	]
+    },
+    "GoDeps" : [
+        { "repo"      : "thrift",
+          "reltag"    : "0.9.3",
+          "renamesrc" : "thrift",
+          "renamedst" : "git.apache.org/thrift.git"
+        },
+        { "repo"       : "mux",
+          "renamesrc"  : "mux",
+          "renamedst"  : "github.com/gorilla/"
+        },
+        { "repo"       : "websocket",
+          "renamesrc"  : "websocket",
+          "renamedst"  : "github.com/gorilla/"
+        },
+        { "repo"       : "context",
+          "renamesrc"  : "context",
+          "renamedst"  : "github.com/gorilla/"
+        },
+        { "repo"        : "gopacket",
+          "renamesrc"   : "gopacket",
+          "renamedst"   : "github.com/google/"
+        },
+        { "repo"        : "pyang"
+        },
+        { "repo"        : "openconfig"
+        },
+        { "repo"        : "nanomsg",
+          "renamesrc"   : "nanomsg",
+          "renamedst"   : "github.com/nanomsg/"
+        },
+        { "repo"        : "go-nanomsg",
+          "renamesrc"   : "go-nanomsg",
+          "renamedst"   : "github.com/op/"
+        },
+        { "repo"        : "netlink",
+          "renamesrc"   : "netlink",
+          "renamedst"   : "github.com/vishvananda/netlink"
+        },
+        { "repo"        : "netns",
+          "renamesrc"   : "netns",
+          "renamedst"   : "github.com/vishvananda/netns"
+        },
+
+        { "repo"        : "gouuid",
+          "renamesrc"   : "gouuid",
+          "renamedst"   : "github.com/nu7hatch/gouuid"
+        },
+        { "repo"        : "net",
+          "renamesrc"   : "net",
+          "renamedst"   : "golang.org/x/net"
+        },
+        { "repo"        : "redigo",
+          "renamesrc"   : "redigo",
+          "renamedst"   : "github.com/garyburd/redigo"
+        },
+        {
+          "repo"      : "libovsdb",
+          "renamesrc" : "libovsdb",
+          "renamedst" : "github.com/socketplane/libovsdb"
+        },
+        {
+          "repo"      : "netfilter",
+          "renamesrc" : "netfilter",
+          "renamedst" : "github.com/netfilter"
+        },
+        {
+          "repo"      : "sflow",
+          "renamesrc" : "sflow",
+          "renamedst" : "github.com/Cistern/sflow"
+        }
+     ],
+	"Repos" : [ "opx-flxl2", "opx-flxl3", "opx-flxutils", "opx-flxconfig", "opx-flxmodels", "opx-flxinfra", "opx-flxSdk"]
+}
