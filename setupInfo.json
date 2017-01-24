@@ -95,5 +95,39 @@
           "renamedst" : "github.com/Cistern/sflow"
         }
      ],
-	"Repos" : [ "opx-flxl2", "opx-flxl3", "opx-flxutils", "opx-flxconfig", "opx-flxmodels", "opx-flxinfra", "opx-flxSdk", "opx-flxcps", "opx-flxasicdstub"]
+	"Repos" : [
+	{
+		"repo": "opx-flxl2",
+		"renameRepo": "l2"
+	},
+	{
+		"repo": "opx-flxl3",
+		"renameRepo": "l3"
+	},
+	{
+		"repo": "opx-flxutils", 
+		"renameRepo": "utils"
+	},
+	{
+		"repo": "opx-flxconfig",
+		"renameRepo": "config"
+	},
+	{	"repo": "opx-flxmodels",
+		"renameRepo": "models"
+	},
+	{
+		"repo": "opx-flxinfra",
+		"renameRepo": "infra"
+	},
+	{
+		"repo": "opx-flxSdk",
+		"renameRepo": "flexSdk"
+	},
+	{	"repo": "opx-flxcps",
+		"renameRepo": "ops-asic"
+	},
+	{
+		"repo": "opx-flxasicdstub",
+		"renameRepo": "asicd"
+	}]
 }

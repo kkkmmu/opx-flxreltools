@@ -73,15 +73,12 @@ def setupGoDeps(comp=None):
                 cmd = 'mv ' + extSrcDir+ rp['renamesrc']+ ' ' + extSrcDir+ rp['renamedst']
                 local(cmd)
 
-def setupSRRepos(comp = None):
+def setupSRRepos():
     print 'Fetching Snaproute repositories dependencies....'
     global gAnchorDir, gGitUsrName
     gAnchorDir = prompt('Host directory:', default='git')
     gGitUsrName = prompt('Git username:')
-    if comp:
-        srRepos = [comp]
-    else:
-        srRepos = setupHandler().getSRRepos()
+    srRepos = setupHandler().getSRRepos()
     usrName =  setupHandler().getUsrName()
     srcDir = setupHandler().getSRSrcDir()
     anchorDir = setupHandler().getAnchorDir()
@@ -93,8 +90,8 @@ def setupSRRepos(comp = None):
 
     for repo in srRepos:
         with lcd(srcDir):
-            if not (os.path.exists(srcDir + repo)  and os.path.isdir(srcDir+ repo)):
-                cmd = 'git clone '+ repoPrefix + repo 
+            if not (os.path.exists(srcDir + repo['renameRepo'])  and os.path.isdir(srcDir+ repo['renameRepo'])):
+                cmd = 'git clone '+ repoPrefix + repo['repo'] + ' ' + repo['renameRepo']
                 local(cmd)
 
 def installThrift():
