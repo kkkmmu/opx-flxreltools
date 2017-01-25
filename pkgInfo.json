@@ -1,0 +1,13 @@
+{
+    "build": "178", 
+    "changeindex": "4", 
+    "major": "1", 
+    "minor": "0", 
+    "patch": "0", 
+    "platforms": [
+        {
+            "asicInterface": "cps", 
+            "odm": "dell-s6000"
+        }
+    ]
+}
