@@ -30,15 +30,6 @@ def setupExternals (comp=None):
     	    with settings(prompts={'Do you want to continue [Y/n]? ': 'Y'}):
                 local(cmd)
 
-def setupCliDeps():
-    print 'Fetching Python dependencies for CLI....'
-    repo = 'extPkgs'
-    repoPrefix = 'https://github.com/%s/' % ('OpenSnaproute')
-    extSrcDir = setupHandler().getExtSrcDir()
-    _setupGitRepo ( repo,
-                    setupHandler().getExtSrcDir(),
-                    repoPrefix)
-
 def _setupGitRepo (repo, srcDir, repoPrefix): 
     with lcd(srcDir):
         if not (os.path.exists(srcDir + repo)  and os.path.isdir(srcDir+ repo)):
@@ -181,7 +172,6 @@ def setupDevEnv() :
     _createDirectoryStructure()
     setupHandler()
     setupExternals()
-    setupCliDeps()
     setupGoDeps()
     installThrift()
     installNanoMsgLib()
