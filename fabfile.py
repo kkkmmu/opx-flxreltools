@@ -163,7 +163,7 @@ def printInstruction():
     print "Please add the following lines in your ~/.bashrc file"
     print "###########################"
     print "export PATH=$PATH:/usr/local/go/bin"
-    print "export SR_CODE_BASE=$HOME" + gAnchorDir
+    print "export SR_CODE_BASE=$HOME/" + gAnchorDir
     print "export GOPATH=$SR_CODE_BASE/snaproute/:$SR_CODE_BASE/external/:$SR_CODE_BASE/generated/"
     print "###########################"
 
