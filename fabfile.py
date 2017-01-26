@@ -75,8 +75,8 @@ def setupSRRepos():
     anchorDir = setupHandler().getAnchorDir()
 
     if not os.path.isfile(srcDir+'/Makefile' ):
-        #cmd = 'ln -s ' + anchorDir+  '/reltools/Makefile '+  srcDir + 'Makefile'
-        #local(cmd)
+        cmd = 'ln -s ' + anchorDir+  '/reltools/Makefile '+  srcDir + 'Makefile'
+        local(cmd)
         repoPrefix   = 'https://github.com/open-switch/'
 
     for repo in srRepos:
@@ -158,11 +158,12 @@ def _verifyThriftInstallation(thriftVersion='0.9.3'):
     return thriftVersion in resp
 
 def printInstruction():
+    global gAnchorDir
     print "###########################"
     print "Please add the following lines in your ~/.bashrc file"
     print "###########################"
     print "export PATH=$PATH:/usr/local/go/bin"
-    print "export SR_CODE_BASE=$HOME/git"
+    print "export SR_CODE_BASE=$HOME" + gAnchorDir
     print "export GOPATH=$SR_CODE_BASE/snaproute/:$SR_CODE_BASE/external/:$SR_CODE_BASE/generated/"
     print "###########################"
 

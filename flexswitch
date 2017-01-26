@@ -177,7 +177,6 @@ def checkAllDaemons (baseDir):
 def checkPreReqFilesExists():
     filesList = [ '/opt/flexswitch/params/clients.json',
                   '/opt/flexswitch/params/systemProfile.json',
-                  '/opt/flexswitch/params/asicdConf.json',
                 ]
     for fileName in filesList:
         if not os.path.isfile(fileName):
