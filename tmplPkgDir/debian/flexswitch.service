@@ -1,0 +1,12 @@
+[Unit]
+Description=flexswitch daemons
+After=network.target
+
+[Service]
+Type=forking
+EnvironmentFile=/etc/opx/opx-environment
+ExecStart=/etc/init.d/flexswitch start
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

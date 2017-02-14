@@ -13,7 +13,7 @@
 
 # Do NOT "set -e"
 
-# PATH should only include /usr/* if it runs after the mountnfs.sh script
+# PATH should only include /usr/ if it runs after the mountnfs.sh script
 #
 # Function that starts the daemon/service
 #
