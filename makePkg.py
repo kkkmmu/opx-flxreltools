@@ -67,7 +67,7 @@ if __name__ == '__main__':
         command = []
         command.append('rm -rf ' + build_dir)
         executeCommand(command)
-        pkgName = "flexswitch_" + buildTarget + "-" + pkgVersion + "_amd64.deb"
+        pkgName = "flexswitch_" + pkgVersion + "_amd64.deb"
         cmd = []
         cmd = 'mv flexswitch_' + pkgVersionNum + '*_amd64.deb ' + pkgName
         executeCommand(cmd)
