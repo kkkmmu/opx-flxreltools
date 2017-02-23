@@ -28,9 +28,8 @@ if __name__ == '__main__':
         pkgInfo = cfgFile.read().replace('\n', '')
         parsedPkgInfo = json.loads(pkgInfo)
     cfgFile.close()
-    usrName = getpass.getuser()
     buildTargetList = parsedPkgInfo['platforms']
-    pkgVersion =  usrName + '_' + parsedPkgInfo['major']+ '.'\
+    pkgVersion = "snaproute_" + parsedPkgInfo['major']+ '.'\
                   + parsedPkgInfo['minor'] +  '.' + parsedPkgInfo['patch'] + \
                   '.' + parsedPkgInfo['build'] + '.' + parsedPkgInfo['changeindex']
     pkgVersionNum =  parsedPkgInfo['major']+ '.'\
