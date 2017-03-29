@@ -38,6 +38,7 @@ all: $(ALL_DEPS)
 
 installdir:
 	$(MKDIR) $(DESTDIR)
+	$(MKDIR) $(SR_CODE_BASE)/snaproute/src/ops-asic/cpsAsicdClnt/_obj
 	$(MKDIR) $(DESTDIR)/$(EXT_INSTALL_PATH)/
 	$(MKDIR) $(DESTDIR)/$(EXT_INSTALL_PATH)/bin
 	$(MKDIR) $(DESTDIR)/$(EXT_INSTALL_PATH)/models
